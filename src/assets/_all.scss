@@ -1,5 +1,19 @@
 @import "~bootstrap/scss/functions";
 @import "./helpers/variables";
 @import "~bootstrap/scss/mixins";
-
+@import "./helpers/maps";
+@import "./helpers/utilities";
+@import "./components/bg-img";
+@import "./components/garage-size";
+@import "./components/car-model-img";
+@import "./components/img-opacity";
+@import "./components/car-bg-img";
+@import "./components/show-card-detail";
+@import "./components/hover-shadow";
+@import "./components/car-text-tra";
+@import "./components/designer-hover";
+@import "./components/deco-line";
+@import "./components/body-fontfamily";
+@import "./components/gradient";
+@import "./components/navbar-revers";
 @import "~bootstrap/scss/bootstrap";

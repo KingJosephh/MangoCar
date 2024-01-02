@@ -1,0 +1,28 @@
+.ds-hover-father{
+    .ds-hover{
+        margin-left: 0;
+    transition: margin-left .25s ease;
+    }
+    &:hover{
+        .ds-hover{
+            @include media-breakpoint-up(lg){
+                margin-left: 16px;
+            }
+            color: $info;
+        }
+    }
+}
+.ds-dash-father{
+    .ds-dash{
+        opacity: 0;
+        transition: opacity 0.8s ease;
+    }
+    &:hover {
+        .ds-dash{
+            @include media-breakpoint-up(lg){
+                opacity: 1;
+            }
+            
+        }       
+    }
+}
