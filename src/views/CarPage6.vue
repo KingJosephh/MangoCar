@@ -1,0 +1,162 @@
+<template>
+    <NavBar></NavBar>
+    <section>
+        <div class="row m-0 px-lg-5">
+          <div class="col-lg-4 mt-5">
+                <div class="card border-0 shadow-sm rounded-4">
+                    <div class="card-header border-0 bg-transparent p-0">
+                        <!-- <div class="car-bg-img" style="background-image: url('../assets/car-img/per2.jpg');"></div> -->
+                        <img class="car-bg-img" :src="managerId.imgUrl" alt="per2">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <p class="mb-1 text-secondary">銷售經理</p>
+                            <p class="fw-bold">{{ managerId.name }}</p>
+                        </div>
+                        <div>
+                            <p class="mb-1 text-secondary">電話</p>
+                            <p class="fw-bold">{{ managerId.phone }}</p>
+                        </div>
+                        <div>
+                            <p class="mb-1 text-secondary">地址</p>
+                            <p class="fw-bold">{{ managerId.address }}</p>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center mb-4">
+                        <router-link to="/page4">
+                            <button class="btn btn-fire text-white btn-lg rounded-pill px-5 text-nowrap animate__animated animate__bounce animate__infinite">前往預約賞車</button>
+                        </router-link>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 mt-5">
+                <div class="card border-0 shadow-sm mb-6">
+                    <div class="row g-3 m-0 p-4">
+                        <div class="col-12">
+                            <h3 class="fw-bold">{{ showCarDetail.carName }}</h3>
+                        </div>
+                        <div class="col-6">
+                            <h5>車身型式: {{ showCarDetail.doorPassenger }}</h5>
+                        </div>
+                        <div class="col-6">
+                            <h5>動力型式: {{ showCarDetail.dye }}</h5>
+                        </div>
+                        <div class="col-6">
+                            <h5>年分: {{ showCarDetail.year }} 年</h5>
+                        </div>
+                        <div class="col-6">
+                            <h5>里程: {{ showCarDetail.longJourney }}</h5>
+                        </div>
+                        <div class="col-6">
+                            <h4 class="fw-bold">售價: {{ showCarDetail.price }}</h4>
+                        </div>
+                        <div class="col-12 pb-4">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col-3"><h5>安全配備</h5></div>
+                                        <div class="col">
+                                          <p :class="{'text-disable': !provide.includes('胎壓偵測')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('胎壓偵測')}"></i>胎壓偵測</p>
+                                            <p :class="{'text-disable': !provide.includes('防盜系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('防盜系統')}"></i>防盜系統</p>
+                                            <p :class="{'text-disable': !provide.includes('循跡系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('循跡系統')}"></i>循跡系統</p>
+                                            <p :class="{'text-disable': !provide.includes('煞車輔助系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('煞車輔助系統')}"></i>煞車輔助系統</p>
+                                            <p :class="{'text-disable': !provide.includes('ABS防鎖死')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('ABS防鎖死')}"></i>ABS防鎖死</p>
+                                        </div>
+                                        <div class="col">
+                                          <p :class="{'text-disable': !provide.includes('動態穩定系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('動態穩定系統')}"></i>動態穩定系統</p>
+                                            <p :class="{'text-disable': !provide.includes('keyless免鑰系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('keyless免鑰系統')}"></i>keyless免鑰系統</p>
+                                            <p :class="{'text-disable': !provide.includes('中控鎖')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('中控鎖')}"></i>中控鎖</p>
+                                            <p :class="{'text-disable': !provide.includes('兒童安全椅固定裝置')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('兒童安全椅固定裝置')}"></i>兒童安全椅固定裝置</p>
+                                            <p :class="{'text-disable': !provide.includes('安全氣囊')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('安全氣囊')}"></i>安全氣囊</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col-3"><h5>舒適配備</h5></div>
+                                        <div class="col">
+                                          <p :class="{'text-disable': !comfortProvide.includes('定速系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('定速系統')}"></i>定速系統</p>
+                                            <p :class="{'text-disable': !comfortProvide.includes('倒車顯影系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('倒車顯影系統')}"></i>倒車顯影系統</p>
+                                            <p :class="{'text-disable': !comfortProvide.includes('多功能方向盤')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('多功能方向盤')}"></i>多功能方向盤</p>
+                                            <p :class="{'text-disable': !comfortProvide.includes('恆溫空調')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('恆溫空調')}"></i>恆溫空調</p>
+                                            <p :class="{'text-disable': !comfortProvide.includes('電動車窗')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('電動車窗')}"></i>電動車窗</p>
+                                        </div>
+                                        <div class="col">
+                                            <p :class="{'text-disable': !comfortProvide.includes('衛星導航')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('衛星導航')}"></i>衛星導航</p>
+                                            <p :class="{'text-disable': !comfortProvide.includes('LED頭燈')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('LED頭燈')}"></i>LED頭燈</p>
+                                            <p :class="{'text-disable': !comfortProvide.includes('倒車雷達')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('倒車雷達')}"></i>倒車雷達</p>
+                                            <p :class="{'text-disable': !comfortProvide.includes('自動停車系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('自動停車系統')}"></i>自動停車系統</p>
+                                            <p :class="{'text-disable': !comfortProvide.includes('真皮座椅')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('真皮座椅')}"></i>真皮座椅</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <img class="car-model2 rounded-4" :src="showCarDetail.imgUrl" alt="gt63">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <Footer></Footer>
+    </template>
+
+<script>
+import NavBar from '@/components/CarNavBar.vue'
+import Footer from '@/components/FooterPage.vue'
+
+export default {
+  data () {
+    return {
+      carLis: [],
+      showCarDetail: [],
+      managerId: [],
+      provide: [],
+      comfortProvide: []
+    }
+  },
+  components: {
+    NavBar,
+    Footer
+  },
+  methods: {
+    getCarData () {
+      const api = 'http://localhost:3000'
+      this.$http.get(api + '/car?_expand=salesManager')
+        .then((res) => {
+          console.log(res)
+          this.carLis = res.data
+          this.getCarOneList()
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    },
+    getCarOneList () {
+      const carId = this.$route.params.carListId
+      this.carLis.forEach((item) => {
+        if (item.id === carId) {
+          // return item
+          console.log(item.salesManager.name)
+          this.managerId = item.salesManager
+          this.showCarDetail = item
+          this.provide = item.provide
+          this.comfortProvide = item.comfortProvide
+        }
+      })
+    },
+    getImagePath (relativePath) {
+      // 假设 images 文件夹在 public 目录下
+      return require(`@/assets/car-img/manager${relativePath}`)
+    }
+  },
+  created () {
+    this.getCarData()
+  },
+  mounted () {
+    window.scrollTo(0, 0)
+  }
+}
+</script>
