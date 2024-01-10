@@ -34,3 +34,23 @@
         width: 200px;
     }
 }
+.car-model4{
+    position: center center;
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+    @include media-breakpoint-up(lg) { 
+        height: 100%;        
+        width: 350px;
+    }
+}
+.car-model5{
+    position: center center;
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+    @include media-breakpoint-up(lg) { 
+        height: 250px;        
+        width: 100%;
+    }
+}

@@ -2,36 +2,12 @@
     <NavBar></NavBar>
     <section>
         <div class="row m-0 px-lg-5">
-          <div class="col-lg-4 mt-5">
-                <div class="card border-0 shadow-sm rounded-4">
-                    <div class="card-header border-0 bg-transparent p-0">
-                        <!-- <div class="car-bg-img" style="background-image: url('../assets/car-img/per2.jpg');"></div> -->
-                        <img class="car-bg-img" :src="managerId.imgUrl" alt="per2">
-                    </div>
-                    <div class="card-body">
-                        <div>
-                            <p class="mb-1 text-secondary">銷售經理</p>
-                            <p class="fw-bold">{{ managerId.name }}</p>
-                        </div>
-                        <div>
-                            <p class="mb-1 text-secondary">電話</p>
-                            <p class="fw-bold">{{ managerId.phone }}</p>
-                        </div>
-                        <div>
-                            <p class="mb-1 text-secondary">地址</p>
-                            <p class="fw-bold">{{ managerId.address }}</p>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-center mb-4">
-                        <router-link to="/page4">
-                            <button class="btn btn-fire text-white btn-lg rounded-pill px-5 text-nowrap animate__animated animate__bounce animate__infinite">前往預約賞車</button>
-                        </router-link>
-                    </div>
-                </div>
-            </div>
             <div class="col-lg-8 mt-5">
                 <div class="card border-0 shadow-sm mb-6">
                     <div class="row g-3 m-0 p-4">
+                        <div class="col-12">
+                            <BigImg :car-img="carImg"></BigImg>
+                        </div>
                         <div class="col-12">
                             <h3 class="fw-bold">{{ showCarDetail.carName }}</h3>
                         </div>
@@ -92,9 +68,33 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12">
-                            <img class="car-model2 rounded-4" :src="showCarDetail.imgUrl" alt="gt63">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mt-5">
+                <div class="card border-0 shadow-sm rounded-4">
+                    <div class="card-header border-0 bg-transparent p-0">
+                        <!-- <div class="car-bg-img" style="background-image: url('../assets/car-img/per2.jpg');"></div> -->
+                        <img class="car-bg-img" :src="managerId.imgUrl" alt="per2">
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <p class="mb-1 text-secondary">銷售經理</p>
+                            <p class="fw-bold">{{ managerId.name }}</p>
                         </div>
+                        <div>
+                            <p class="mb-1 text-secondary">電話</p>
+                            <p class="fw-bold">{{ managerId.phone }}</p>
+                        </div>
+                        <div>
+                            <p class="mb-1 text-secondary">地址</p>
+                            <p class="fw-bold">{{ managerId.address }}</p>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center mb-4">
+                        <router-link to="/page4">
+                            <button class="btn btn-fire text-white btn-lg rounded-pill px-5 text-nowrap animate__animated animate__bounce animate__infinite">前往預約賞車</button>
+                        </router-link>
                     </div>
                 </div>
             </div>
@@ -106,6 +106,7 @@
 <script>
 import NavBar from '@/components/CarNavBar.vue'
 import Footer from '@/components/FooterPage.vue'
+import BigImg from '@/components/carImgSwiperBig.vue'
 
 export default {
   data () {
@@ -114,12 +115,14 @@ export default {
       showCarDetail: [],
       managerId: [],
       provide: [],
-      comfortProvide: []
+      comfortProvide: [],
+      carImg: []
     }
   },
   components: {
     NavBar,
-    Footer
+    Footer,
+    BigImg
   },
   methods: {
     getCarData () {
@@ -144,11 +147,11 @@ export default {
           this.showCarDetail = item
           this.provide = item.provide
           this.comfortProvide = item.comfortProvide
+          this.carImg = item.imgUrl
         }
       })
     },
     getImagePath (relativePath) {
-      // 假设 images 文件夹在 public 目录下
       return require(`@/assets/car-img/manager${relativePath}`)
     }
   },
@@ -160,3 +163,20 @@ export default {
   }
 }
 </script>
+<style>
+#app { height: 100% }
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #e2e2e2;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+</style>

@@ -10,12 +10,11 @@
                 </div>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <router-link to="/" class="nav-link active text-info text-start text-nowrap" aria-current="page"><p class="mb-0 me-lg-0 ms-3">首頁</p></router-link>
-                        <router-link to="/page2" class="nav-link text-start text-nowrap"><p class="mb-0 ms-lg-0 ms-3">服務介紹</p></router-link>
-                        <router-link to="/page3" class="nav-link text-start text-nowrap"><p class="mb-0 ms-lg-0 ms-3">熱門車款</p></router-link>
-                        <router-link to="/page5" class="nav-link text-start text-nowrap"><p class="mb-0 ms-lg-0 ms-3">近期好車</p></router-link>
+                        <router-link to="/" class="nav-link text-start text-nowrap" aria-current="page" :class="{'text-fire': pageTitle == '首頁'}"><p class="mb-0 me-lg-0 ms-3" ref="pageAA">首頁</p></router-link>
+                        <router-link to="/page3" class="nav-link text-start text-nowrap" :class="{'text-fire': pageTitle == '熱門車款'}"><p class="mb-0 ms-lg-0 ms-3" ref="pageBB">熱門車款</p></router-link>
+                        <router-link to="/page5" class="nav-link text-start text-nowrap" :class="{'text-fire': pageTitle == '關於我們'}"><p class="mb-0 ms-lg-0 ms-3" ref="pageCC">關於我們</p></router-link>
                         <router-link to="/page4" class="nav-link bottom-0 end-0 pt-1 text-nowrap text-start">
-                            <button class="btn btn-info rounded-pill btn-sm px-3 ms-lg-0 ms-2">預約賞車</button>
+                            <button class="btn btn-fire rounded-pill btn-sm px-3 ms-lg-0 ms-2 fw-bold text-white">預約表單</button>
                         </router-link>
                     </div>
                 </div>
@@ -23,3 +22,8 @@
         </nav>
     </section>
 </template>
+<script>
+export default {
+  props: ['pageTitle']
+}
+</script>

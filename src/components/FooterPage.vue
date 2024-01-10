@@ -1,10 +1,10 @@
 <template>
-    <section class="border-top border-info">
+    <section class="border-top border-fire">
         <div class="row d-flex justify-content-center pt-5 m-0 row-cols-lg-2 row-cols-1">
             <div class="col-8">
                 <div class="row m-0">
                     <div class="col d-flex justify-content-center mb-5">
-                        <i class="bi bi-person-hearts fs-s-104 text-info"></i>
+                        <i class="bi bi-person-hearts fs-s-104 text-fire"></i>
                         <div class="ps-4 d-flex flex-column justify-content-center">
                             <h5>加入我們的團隊</h5>
                             <P>我會賣車，希望能盡一份心力</P>
@@ -14,7 +14,7 @@
                         </div>
                     </div>
                     <div class="col d-flex justify-content-center mb-5">
-                        <i class="bi bi-coin fs-s-104 text-info"></i>
+                        <i class="bi bi-coin fs-s-104 text-fire"></i>
                         <div class="ps-4 d-flex flex-column justify-content-center">
                             <h5>贊助我們的團隊</h5>
                             <P>我有好車，請團隊估車</P>

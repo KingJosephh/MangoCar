@@ -36,12 +36,13 @@ const routes = [
     component: () => import('../views/CarPage6.vue')
   },
   {
-    path: '/page7',
+    path: '/page7/:managerId',
+    name: 'page7',
     component: () => import('../views/CarPage7.vue')
   },
   {
-    path: '/swiper',
-    component: () => import('../components/HotSwiper.vue')
+    path: '/swiperImg',
+    component: () => import('../components/carImgSwiperBig.vue')
   }
 ]
 
