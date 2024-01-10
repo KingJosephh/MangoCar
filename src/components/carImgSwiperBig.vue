@@ -14,7 +14,7 @@
       @autoplayTimeLeft="onAutoplayTimeLeft"
       class="mySwiper"
     >
-      <swiper-slide v-for="(item, index) in carImg" :key="index"><img class="car-model2 rounded-4" :src="item"></swiper-slide>
+      <swiper-slide v-for="(item, index) in carImg" :key="index"><img class="p-0" :src="item"></swiper-slide>
       <template #container-end>
         <div class="autoplay-progress">
           <svg viewBox="0 0 48 48" ref="progressCircle">
@@ -109,16 +109,8 @@ body {
   width: 100%;
   height: 539px;
 }
-
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 0;
 }
 
 .swiper-slide img {
