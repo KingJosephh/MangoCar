@@ -79,7 +79,7 @@
                         <h4 class="mb-5 fw-bold d-flex"><i class="bi bi-car-front-fill mx-3 text-fire"></i><p>每台車獲利捐出30%給流浪動物基金會</p></h4>
                         <!-- <button type="button" class="btn btn-outline-fire mb-lg-0 mb-4 mx-auto fw-bold" @click.prevent="toIntroduce">詳細服務介紹</button> -->
                     </div>
-                    <div class="col">
+                    <div class="col p-0">
                         <img class="garage-size" src="../assets/car-img/car-garage.jpg" alt="車庫圖">
                     </div>
                 </div>
@@ -96,13 +96,13 @@
                     <div class="row g-4 m-0 row-cols-lg-4 row-cols-2 px-lg-0 px-4">
                         <div class="col" v-for="(item, index) in topFive" :key="index">
                             <div class="card border-0 text-white show-card-detail rounded-4">
-                              <router-link :to="{name:'page6', params:{carListId:item.id}}" @click="getCarDetail(item.id)">
+                              <router-link :to="{name:'page6', params:{carListId:item.id}}">
                                 <img class="card-img car-model rounded-4" :src="`${item.imgUrl[0]}`" alt="s63">
                                 <div class="card-img-overlay d-flex flex-column justify-content-end">
                                     <p class="c2 fw-bold mb-0 text-white">車種</p>
-                                    <p class="c2 text-nowrap m-0 title text-white">{{ item.carName }}</p>
-                                    <div class="c2 d-flex justify-content-between">
-                                      <div class="c2 d-flex justify-content-between">
+                                    <p class="c2 m-0 title text-white">{{ item.carName }}</p>
+                                    <div class="c2 d-lg-flex justify-content-between">
+                                      <div class="c2 d-flex justify-content-lg-between">
                                         <i class="bi bi-fire text-fire me-2"></i>
                                         <p class="m-0 text-white animate__animated animate__heartBeat animate__infinite">{{ item.fire }}</p>
                                       </div>
@@ -110,7 +110,7 @@
                                     </div>
                                     <div class="c1 card-img-overlay gradient car-model rounded-4">
                                       <div class="d-flex justify-content-center h-100">
-                                        <p class="d-flex align-items-center h5 text-white fw-bold">點我</p>
+                                        <p class="d-flex align-items-lg-center h5 text-white fw-bold">點我</p>
                                       </div>
                                     </div>
                                 </div>
@@ -228,12 +228,12 @@
         <p class="text-center mb-6">這裡是在還在等家的浪浪們，若您正巧在找個家人，不訪來認識一下唄</p>
     </section> -->
     <section>
-        <div class="bg-img-size" :style="{ backgroundImage: `url(${require('@/assets/car-img/f-page4.jpg')})`, height:'680px'}">
+        <div class="bg-img-size4" :style="{ backgroundImage: `url(${require('@/assets/car-img/f-page4.jpg')})`}">
             <!-- <div class="position-absolute text-center text-secondary" style="top: 50%; left: 15%; transform: translate(-25%, -50%); text-align: center;">  -->
             <div class="row m-0">
               <div class="col-lg-4 col-12 text-white d-flex flex-column justify-content-center align-items-center">
                 <div class="row d-flex flex-column">
-                  <div class="col">
+                  <div class="col-lg-12 col-0 d-lg-block d-none">
                     <img src="@/assets/car-img/shop1.jpg" :style="{height:'400px'}" class="car-model4 mt-5">
                   </div>
                   <div class="col">
@@ -246,7 +246,7 @@
               </div>
               <div class="col-lg-4 col-12 text-white d-flex flex-column justify-content-center align-items-center">
                 <div class="row d-flex flex-column">
-                  <div class="col">
+                  <div class="col-lg-12 col-0 d-lg-block d-none">
                     <img src="@/assets/car-img/shop2.jpg" :style="{height:'400px'}" class="car-model4 mt-5">
                   </div>
                   <div class="col">
@@ -259,7 +259,7 @@
               </div>
               <div class="col-lg-4 col-12 text-white d-flex flex-column justify-content-center align-items-center">
                 <div class="row d-flex flex-column">
-                  <div class="col">
+                  <div class="col-lg-12 col-0 d-lg-block d-none">
                     <img src="@/assets/car-img/shop3.jpg" :style="{height:'400px'}" class="car-model4 mt-5">
                   </div>
                   <div class="col">
@@ -309,8 +309,11 @@ export default {
       const api = 'http://localhost:3000'
       this.$http.get(api + '/car?_expand=salesManager')
         .then((res) => {
-          console.log(res)
-          this.carLis = res.data
+          res.data.forEach((item) => {
+            if (item.state === '未出售') {
+              this.carLis.push(item)
+            }
+          })
           this.getTopFive()
           this.getEarlyOne()
         })
@@ -331,9 +334,6 @@ export default {
       const carsWithDateObjects = this.carLis.map(car => ({ ...car, date: new Date(car.date) })).sort((a, b) => b.date - a.date)
       const getFiveDate = carsWithDateObjects.slice(0, 5)
       this.topFiveEarly = getFiveDate
-    },
-    getCarDetail (aa) {
-      this.$emit('carListId', aa)
     }
   },
   created () {
@@ -425,7 +425,7 @@ body {
 
 .swiper {
   width: 100%;
-  height: 539px;
+  height: 650px;
 }
 
 .swiper-slide {

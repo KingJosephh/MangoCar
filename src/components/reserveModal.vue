@@ -1,23 +1,14 @@
 <template>
-    <NavBar></NavBar>
-    <header class="min-vh-2-40 position-relative">
-        <div class="position-absolute bg-attachment-fixed bg-img-size-2 mb-2" :style="{ backgroundImage: `url(${require('@/assets/car-img/pag2/pg2Car.jpg')})`, top: 0, right: 0, bottom: 0, left: 0, height: '288px'}"></div>
-        <div class="position-absolute top-50 start-50 translate-middle text-center text-secondary">
-            <p class="display-1 fw-bold">預約 表單</p>
-            <hr class="mb-1 mx-n3">
-        </div>
-    </header>
-    <section>
-        <div class="container">
-            <div class="card rounded-4 deco-line border-0 shadow-lg mb-5">
-                <div class="card-header bg-transparent text-center border-0 pt-5">
-                    <h3 class="fw-bold">
-                        預約表單
-                    </h3>
-                </div>
-                <div class="card-body">
-                    <form class="row g-3">
-                        <div class="col-md-6">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" ref="reserveModal">
+<div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
                             <label for="我想要預約" class="form-label">我想要預約</label>
                             <select type="text" class="form-select" id="我想要預約" v-model="reserve.goal">
                                 <option value="賞車">賞車</option>
@@ -30,7 +21,7 @@
                         </div>
                         <div class="col-md-6">
                             <label for="手機號碼" class="form-label">手機號碼</label>
-                            <input type="number" class="form-control" id="手機號碼" placeholder="請輸入手機號碼" v-model="reserve.phone">
+                            <input type="text" class="form-control" id="手機號碼" placeholder="請輸入手機號碼" v-model="reserve.phone">
                         </div>
                         <div class="col-md-6">
                             <label for="預約日期" class="form-label">預約日期</label>
@@ -70,77 +61,45 @@
                             <input type="button" class="btn btn-fire rounded-pill px-4" value="送出預約資訊" @click.prevent="getAppointment">
                             <!-- <button type="submit" class="btn btn-info rounded-pill px-4" >送出預約資訊</button> -->
                         </div>
-                    </form>
-                </div>
-            </div>
         </div>
-    </section>
-        <Footer></Footer>
-    </template>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" @click="$emit('reserveData', reserve)">儲存</button>
+    </div>
+    </div>
+</div>
+</div>
+</template>
 <script>
-import NavBar from '@/components/CarNavBar.vue'
-import Footer from '@/components/FooterPage.vue'
+import Modal from 'bootstrap/js/dist/modal'
 export default {
-  components: {
-    NavBar,
-    Footer
+  props: {
+    reserveData: {
+      type: Object,
+      default () { return {} }
+    }
+  },
+  watch: {
+    reserveData () {
+      this.reserve = this.reserveData
+    }
   },
   data () {
     return {
-      reserve: {
-        else: '無'
-      }
+      reserve: {}
     }
   },
   methods: {
-    getAppointment () {
-      console.log(this.reserve)
-      if (
-        this.reserve.goal &&
-        this.reserve.name &&
-        this.reserve.phone &&
-        this.reserve.date &&
-        this.reserve.city &&
-        this.reserve.address &&
-        this.reserve.manager &&
-        this.reserve.carName
-      ) {
-        console.log(this.reserve)
-        const api = 'http://localhost:3000'
-        this.$http.post(api + '/reserveList', this.reserve)
-          .then((res) => {
-            console.log(res)
-            this.reserve = {
-              else: '無'
-            }
-          })
-          .catch((err) => {
-            console.log(err)
-          })
-      } else {
-        alert('資料不完整')
-      }
+    showModal () {
+      this.modal.show()
+    },
+    hideModal () {
+      this.modal.hide()
     }
   },
   mounted () {
-    window.scroll(0, 0)
+    this.modal = new Modal(this.$refs.reserveModal)
   }
 }
 </script>
-<style>
-#app { height: 100% }
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-body {
-  background: #e2e2e2;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
-</style>

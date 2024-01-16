@@ -11,9 +11,9 @@
                                 <img class="card-img car-model rounded-4" :src="`${item.imgUrl[0]}`" alt="s63">
                                 <div class="card-img-overlay d-flex flex-column justify-content-end">
                                     <p class="c2 fw-bold mb-0">車種</p>
-                                    <p class="c2 text-nowrap m-0 title">{{ item.carName }}</p>
-                                    <div class="c2 d-flex justify-content-between">
-                                      <div class="c2 d-flex justify-content-between">
+                                    <p class="c2 m-0 title">{{ item.carName }}</p>
+                                    <div class="c2 d-lg-flex justify-content-between">
+                                      <div class="c2 d-flex justify-content-lg-between">
                                         <i class="bi bi-fire text-fire"></i>
                                         <p class="m-0">{{ item.fire }}</p>
                                       </div>
@@ -21,7 +21,7 @@
                                     </div>
                                     <div class="c1 card-img-overlay gradient car-model rounded-4">
                                       <div class="d-flex justify-content-center h-100">
-                                        <p class="d-flex align-items-center h5 text-white fw-bold">點我</p>
+                                        <p class="d-flex align-items-lg-center h5 text-white fw-bold">點我</p>
                                       </div>
                                     </div>
                                 </div>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="d-flex justify-content-center mb-4">
                         <router-link to="/page4">
-                            <button class="btn btn-info btn-lg rounded-pill px-5 text-nowrap">前往預約賞車</button>
+                            <button class="btn btn-fire btn-lg rounded-pill px-5 text-nowrap">前往預約賞車</button>
                         </router-link>
                     </div>
                 </div>

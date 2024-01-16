@@ -32,18 +32,21 @@
                                     <div class="row">
                                         <div class="col-3"><h5>安全配備</h5></div>
                                         <div class="col">
-                                          <p :class="{'text-disable': !provide.includes('胎壓偵測')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('胎壓偵測')}"></i>胎壓偵測</p>
-                                            <p :class="{'text-disable': !provide.includes('防盜系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('防盜系統')}"></i>防盜系統</p>
-                                            <p :class="{'text-disable': !provide.includes('循跡系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('循跡系統')}"></i>循跡系統</p>
-                                            <p :class="{'text-disable': !provide.includes('煞車輔助系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('煞車輔助系統')}"></i>煞車輔助系統</p>
-                                            <p :class="{'text-disable': !provide.includes('ABS防鎖死')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('ABS防鎖死')}"></i>ABS防鎖死</p>
+                                          <p v-for="(value, item) in provide" :key="item" :class="{'text-disable': value === false }">
+                                            <i class="bi bi-check2-square text-fire" :class="{'text-disable': value === false }"></i>
+                                            {{ item }}
+                                          </p>
+                                          <!-- <p :class="{'text-disable': !provide.includes('防盜系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('防盜系統')}"></i>防盜系統</p>
+                                          <p :class="{'text-disable': !provide.includes('循跡系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('循跡系統')}"></i>循跡系統</p>
+                                          <p :class="{'text-disable': !provide.includes('煞車輔助系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('煞車輔助系統')}"></i>煞車輔助系統</p>
+                                          <p :class="{'text-disable': !provide.includes('ABS防鎖死')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('ABS防鎖死')}"></i>ABS防鎖死</p>
                                         </div>
                                         <div class="col">
                                           <p :class="{'text-disable': !provide.includes('動態穩定系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('動態穩定系統')}"></i>動態穩定系統</p>
-                                            <p :class="{'text-disable': !provide.includes('keyless免鑰系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('keyless免鑰系統')}"></i>keyless免鑰系統</p>
-                                            <p :class="{'text-disable': !provide.includes('中控鎖')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('中控鎖')}"></i>中控鎖</p>
-                                            <p :class="{'text-disable': !provide.includes('兒童安全椅固定裝置')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('兒童安全椅固定裝置')}"></i>兒童安全椅固定裝置</p>
-                                            <p :class="{'text-disable': !provide.includes('安全氣囊')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('安全氣囊')}"></i>安全氣囊</p>
+                                          <p :class="{'text-disable': !provide.includes('keyless免鑰系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('keyless免鑰系統')}"></i>keyless免鑰系統</p>
+                                          <p :class="{'text-disable': !provide.includes('中控鎖')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('中控鎖')}"></i>中控鎖</p>
+                                          <p :class="{'text-disable': !provide.includes('兒童安全椅固定裝置')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('兒童安全椅固定裝置')}"></i>兒童安全椅固定裝置</p>
+                                          <p :class="{'text-disable': !provide.includes('安全氣囊')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('安全氣囊')}"></i>安全氣囊</p> -->
                                         </div>
                                     </div>
                                 </div>
@@ -51,8 +54,11 @@
                                     <div class="row">
                                         <div class="col-3"><h5>舒適配備</h5></div>
                                         <div class="col">
-                                          <p :class="{'text-disable': !comfortProvide.includes('定速系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('定速系統')}"></i>定速系統</p>
-                                            <p :class="{'text-disable': !comfortProvide.includes('倒車顯影系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('倒車顯影系統')}"></i>倒車顯影系統</p>
+                                          <p v-for="(value, item) in comfortProvide" :key="item" :class="{'text-disable': value === false }">
+                                            <i class="bi bi-check2-square text-fire" :class="{'text-disable': value === false }"></i>
+                                            {{ item }}
+                                          </p>
+                                            <!-- <p :class="{'text-disable': !comfortProvide.includes('倒車顯影系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('倒車顯影系統')}"></i>倒車顯影系統</p>
                                             <p :class="{'text-disable': !comfortProvide.includes('多功能方向盤')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('多功能方向盤')}"></i>多功能方向盤</p>
                                             <p :class="{'text-disable': !comfortProvide.includes('恆溫空調')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('恆溫空調')}"></i>恆溫空調</p>
                                             <p :class="{'text-disable': !comfortProvide.includes('電動車窗')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('電動車窗')}"></i>電動車窗</p>
@@ -62,7 +68,7 @@
                                             <p :class="{'text-disable': !comfortProvide.includes('LED頭燈')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('LED頭燈')}"></i>LED頭燈</p>
                                             <p :class="{'text-disable': !comfortProvide.includes('倒車雷達')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('倒車雷達')}"></i>倒車雷達</p>
                                             <p :class="{'text-disable': !comfortProvide.includes('自動停車系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('自動停車系統')}"></i>自動停車系統</p>
-                                            <p :class="{'text-disable': !comfortProvide.includes('真皮座椅')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('真皮座椅')}"></i>真皮座椅</p>
+                                            <p :class="{'text-disable': !comfortProvide.includes('真皮座椅')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('真皮座椅')}"></i>真皮座椅</p> -->
                                         </div>
                                     </div>
                                 </div>
@@ -116,7 +122,9 @@ export default {
       managerId: [],
       provide: [],
       comfortProvide: [],
-      carImg: []
+      carImg: [],
+      provideList: ['胎壓偵測', '防盜系統', '循跡系統', '煞車輔助系統', 'ABS防鎖死', '動態穩定系統', 'keyless免鑰系統', '中控鎖', '兒童安全椅固定裝置', '安全氣囊'],
+      comfortProvideList: ['定速系統', '倒車顯影系統', '多功能方向盤', '恆溫空調', '電動車窗', 'LED頭燈', '衛星導航', '倒車雷達', '自動停車系統', '真皮座椅']
     }
   },
   components: {
@@ -148,11 +156,30 @@ export default {
           this.provide = item.provide
           this.comfortProvide = item.comfortProvide
           this.carImg = item.imgUrl
+          this.plusFire(item.id)
         }
       })
     },
     getImagePath (relativePath) {
       return require(`@/assets/car-img/manager${relativePath}`)
+    },
+    carDetail () {
+      console.log(this.showCarDetail)
+      this.$emit('carDetail', this.showCarDetail)
+    },
+    plusFire (aa) {
+      const number = parseInt(this.showCarDetail.fire) + 1
+      const fireNum = number.toString()
+      const api = 'http://localhost:3000'
+      this.$http.patch(api + `/car/${aa}`, {
+        fire: fireNum
+      })
+        .then((res) => {
+          console.log(res)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
     }
   },
   created () {

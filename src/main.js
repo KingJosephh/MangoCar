@@ -8,6 +8,7 @@ import SwiperClass, { /* swiper modules... */ } from 'swiper'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/css'
 import 'animate.css/animate.min.css'
+import 'bootstrap'
 
 const app = createApp(App)
 app.use(VueAxios, axios)

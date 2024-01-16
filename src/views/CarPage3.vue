@@ -55,16 +55,16 @@
             </div>
             <div class="col">
                 <div class="mb-5">
-                    <div class="row m-0 row-cols-lg-3 row-cols-2 px-lg-0 px-2">
+                    <div v-if="finalListAll.length > 0"  class="row m-0 row-cols-lg-3 row-cols-2 px-lg-0 px-2">
                         <div class="col mt-0 mb-3" v-for="(item, index) in getPageData" :key="index">
                           <router-link :to="{name:'page6', params:{carListId:item.id}}">
                             <div class="card border-0 text-white show-card-detail rounded-4">
                                 <img class="card-img car-model rounded-4" :src="`${item.imgUrl[0]}`" alt="s63">
                                 <div class="card-img-overlay d-flex flex-column justify-content-end">
                                     <p class="c2 fw-bold mb-0">車種</p>
-                                    <p class="c2 text-nowrap m-0 title">{{ item.carName }}</p>
-                                    <div class="c2 d-flex justify-content-between">
-                                      <div class="c2 d-flex justify-content-between">
+                                    <p class="c2 m-0 title">{{ item.carName }}</p>
+                                    <div class="c2 d-lg-flex justify-content-between">
+                                      <div class="c2 d-flex justify-content-lg-between">
                                         <i class="bi bi-fire text-fire"></i>
                                         <p class="m-0">{{ item.fire }}</p>
                                       </div>
@@ -72,7 +72,7 @@
                                     </div>
                                     <div class="c1 card-img-overlay gradient car-model rounded-4">
                                       <div class="d-flex justify-content-center h-100">
-                                        <p class="d-flex align-items-center h5 text-white fw-bold">點我</p>
+                                        <p class="d-flex align-items-lg-center h5 text-white fw-bold">點我</p>
                                       </div>
                                     </div>
                                 </div>
@@ -113,6 +113,9 @@
                             </div>
                         </div> -->
                     </div>
+                    <div v-else>
+                        <h2 class="text-center">找不到符合的車輛</h2>
+                    </div>
                 </div>
             </div>
         </div>
@@ -141,7 +144,7 @@ export default {
   data () {
     return {
       filterCondition: {},
-      carList: [],
+      carLis: [],
       finalListAll: [],
       managerList: [],
       pageTitleS: '熱門車款',
@@ -151,11 +154,12 @@ export default {
   },
   computed: {
     countPage () {
-      return Math.ceil(this.finalListAll.length / this.perPage)
+      return this.finalListAll.length > 0 ? Math.ceil(this.finalListAll.length / this.perPage) : 0
     },
     getPageData () {
-      return this.finalListAll.slice((this.currentPage - 1) * this.perPage,
-        (this.currentPage * this.perPage))
+      return this.finalListAll.length > 0
+        ? this.finalListAll.slice((this.currentPage - 1) * this.perPage, (this.currentPage * this.perPage))
+        : []
     }
   },
   methods: {
@@ -184,7 +188,11 @@ export default {
       const api = 'http://localhost:3000'
       this.$http.get(api + '/car?_expand=salesManager')
         .then((res) => {
-          this.carLis = res.data
+          res.data.forEach((item) => {
+            if (item.state === '未出售') {
+              this.carLis.push(item)
+            }
+          })
           this.firstShow()
           this.filterCondition = {
             brand: 'all',

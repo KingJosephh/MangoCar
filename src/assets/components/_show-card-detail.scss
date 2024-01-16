@@ -1,7 +1,11 @@
+
 .show-card-detail{
     .c1{
         transition: opacity 0.3s ease;
-        opacity: 0;
+        @media(min-width: 600px) {
+            opacity: 0;
+        }
+        opacity: 1;
         &:hover{
             opacity: 1;
         }
