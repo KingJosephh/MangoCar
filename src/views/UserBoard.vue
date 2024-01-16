@@ -306,8 +306,8 @@ export default {
   },
   methods: {
     getCarData () {
-      const api = 'http://localhost:3000'
-      this.$http.get(api + '/car?_expand=salesManager')
+      const api = `${process.env.VUE_APP_API}/car?_expand=salesManager`
+      this.$http.get(api)
         .then((res) => {
           res.data.forEach((item) => {
             if (item.state === '未出售') {

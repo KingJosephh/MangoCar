@@ -83,8 +83,8 @@ export default {
   },
   methods: {
     getManager () {
-      const api = 'http://localhost:3000'
-      this.$http.get(api + '/salesManagers')
+      const api = `${process.env.VUE_APP_API}/salesManagers`
+      this.$http.get(api)
         .then((res) => {
           console.log(res)
           this.managerList = res.data
@@ -99,8 +99,8 @@ export default {
         })
     },
     getCarData () {
-      const api = 'http://localhost:3000'
-      this.$http.get(api + '/car?_expand=salesManager')
+      const api = `${process.env.VUE_APP_API}/car?_expand=salesManager`
+      this.$http.get(api)
         .then((res) => {
           console.log(res)
           this.carLis = res.data

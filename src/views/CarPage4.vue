@@ -106,8 +106,8 @@ export default {
         this.reserve.carName
       ) {
         console.log(this.reserve)
-        const api = 'http://localhost:3000'
-        this.$http.post(api + '/reserveList', this.reserve)
+        const api = `${process.env.VUE_APP_API}/reserveList`
+        this.$http.post(api, this.reserve)
           .then((res) => {
             console.log(res)
             this.reserve = {

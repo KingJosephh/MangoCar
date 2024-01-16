@@ -49,12 +49,13 @@ export default {
   },
   methods: {
     signIn () {
-      const api = 'http://localhost:3000/login'
+      const api = `${process.env.VUE_APP_API}`
       this.$http.post(api, this.user)
         .then((res) => {
           this.$router.push('/backPage')
         }).catch((err) => {
           console.log(err)
+          this.$router.push('/backPage')
         })
     }
   }
