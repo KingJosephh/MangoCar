@@ -58,7 +58,7 @@ export default {
   },
   methods: {
     getReserve () {
-      const api = 'http://localhost:3000'
+      const api = `${process.env.VUE_APP_API}/reserveList`
       this.$http.get(api + '/reserveList')
         .then((res) => {
           this.appointment = res.data
@@ -74,8 +74,8 @@ export default {
     },
     updated (item) {
       this.reserve = item
-      const api = 'http://localhost:3000'
-      this.$http.patch(api + `/reserveList/${item.id}`, this.reserve)
+      const api = `${process.env.VUE_APP_API}/reserveList/${item.id}`
+      this.$http.patch(api, this.reserve)
         .then((res) => {
           this.getReserve()
         })

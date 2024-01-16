@@ -341,7 +341,7 @@ export default {
   }
 }
 </script>
-<style>
+<!-- <style>
 #app { height: 100% }
 html,
 body {
@@ -357,4 +357,4 @@ body {
   margin: 0;
   padding: 0;
 }
-</style>
+</style> -->

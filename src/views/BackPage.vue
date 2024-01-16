@@ -157,10 +157,10 @@ export default {
       if (foundUndefined) {
         alert('資料不齊全')
       } else {
-        let api = 'http://localhost:3000/car'
+        let api = `${process.env.VUE_APP_API}/car`
         let httpMethod = 'post'
         if (!this.isNew) {
-          api = `http://localhost:3000/car/${aa.id}`
+          api = `${process.env.VUE_APP_API}/car/${aa.id}`
           httpMethod = 'patch'
         }
         this.$http[httpMethod](api, this.addCondition)
@@ -180,8 +180,8 @@ export default {
       del.showModal()
     },
     delModal (aa) {
-      const api = 'http://localhost:3000'
-      this.$http.delete(api + `/car/${aa.id}`)
+      const api = `${process.env.VUE_APP_API}/car/${aa.id}`
+      this.$http.delete(api)
         .then((res) => {
           this.getCarData()
         })
@@ -192,8 +192,8 @@ export default {
       del.hideModal()
     },
     saleCar (aa) {
-      const api = 'http://localhost:3000'
-      this.$http.patch(api + `/car/${aa.id}`, {
+      const api = `${process.env.VUE_APP_API}/car/${aa.id}`
+      this.$http.patch(api, {
         state: '出售'
       })
         .then((res) => {

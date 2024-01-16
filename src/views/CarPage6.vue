@@ -6,7 +6,7 @@
                 <div class="card border-0 shadow-sm mb-6">
                     <div class="row g-3 m-0 p-4">
                         <div class="col-12">
-                            <BigImg :car-img="carImg"></BigImg>
+                            <BigImg class="aa" :car-img="carImg"></BigImg>
                         </div>
                         <div class="col-12">
                             <h3 class="fw-bold">{{ showCarDetail.carName }}</h3>
@@ -190,20 +190,3 @@ export default {
   }
 }
 </script>
-<style>
-#app { height: 100% }
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-body {
-  background: #e2e2e2;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
-</style>

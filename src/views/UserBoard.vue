@@ -1,6 +1,7 @@
 <template>
     <div>
       <NavBar :page-title="pageTitleS"></NavBar>
+      <TitleImg></TitleImg>
       <!-- <section>
         <div class="bg-img-size mb-5" :style="{ backgroundImage: `url(${require('@/assets/car-img/f-page3.jpg')})`, height: '650px' }">
             <div class="position-absolute text-center text-secondary" style="top: 50%; left: 15%; transform: translate(-25%, -50%); text-align: center;">
@@ -12,7 +13,7 @@
             </div>
         </div>
     </section> -->
-    <swiper
+    <!-- <swiper
     :style="{
       '--swiper-navigation-color': '#fff',
       '--swiper-pagination-color': '#fff',
@@ -22,7 +23,7 @@
     :pagination="{ clickable: true }"
     :navigation="true"
     :modules="modules"
-    class="mySwiper mb-5"
+    class="mySwiper mb-5 aa"
   >
     <template #container-start>
       <div
@@ -66,7 +67,7 @@
         <p>🎁 每一位购车顾客将获得一份流浪动物关怀捐赠证书</p>
       </div>
     </swiper-slide>
-  </swiper>
+  </swiper> -->
     <section class="mb-5">
         <div class="row d-flex justify-content-center m-0">
             <div class="col-lg-10 p-0">
@@ -280,7 +281,7 @@
 <script>
 import NavBar from '@/components/CarNavBar.vue'
 import Footer from '@/components/FooterPage.vue'
-import { Swiper, SwiperSlide } from 'swiper/vue'
+import TitleImg from '@/components/UserBoardSwiper.vue'
 import 'swiper/css'
 import 'swiper/css/free-mode'
 import 'swiper/css/pagination'
@@ -288,13 +289,11 @@ import 'swiper/css/navigation'
 import '../assets/components/style1.css'
 
 // import required modules
-import { Parallax, Pagination, Navigation, FreeMode } from 'swiper/modules'
 export default {
   components: {
     NavBar,
     Footer,
-    Swiper,
-    SwiperSlide
+    TitleImg
   },
   data () {
     return {
@@ -341,72 +340,11 @@ export default {
   },
   mounted () {
     window.scrollTo(0, 0)
-  },
-  setup () {
-    return {
-      modules: [Parallax, Pagination, Navigation, FreeMode]
-    }
-  },
-  scoped: true,
-  styles: `#app { height: 100% }
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
-
-.swiper {
-  width: 100%;
-  height: 650px;
-  background: #000;
-}
-
-.swiper-slide {
-  font-size: 18px;
-  color: #fff;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 40px 60px;
-}
-
-.parallax-bg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 130%;
-  height: 100%;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center;
-}
-
-.swiper-slide .title {
-  font-size: 41px;
-  font-weight: 300;
-}
-
-.swiper-slide .subtitle {
-  font-size: 21px;
-}
-
-.swiper-slide .text {
-  font-size: 14px;
-  max-width: 400px;
-  line-height: 1.3;
-}`
+  }
 }
 </script>
 
-<style>
+<!-- <style>
 #app { height: 100% }
 html,
 body {
@@ -423,7 +361,7 @@ body {
   padding: 0;
 }
 
-.swiper {
+.aa {
   width: 100%;
   height: 650px;
 }
@@ -436,4 +374,4 @@ body {
   padding: 0;
 }
 
-</style>
+</style> -->
