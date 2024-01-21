@@ -2,72 +2,6 @@
     <div>
       <NavBar :page-title="pageTitleS"></NavBar>
       <TitleImg></TitleImg>
-      <!-- <section>
-        <div class="bg-img-size mb-5" :style="{ backgroundImage: `url(${require('@/assets/car-img/f-page3.jpg')})`, height: '650px' }">
-            <div class="position-absolute text-center text-secondary" style="top: 50%; left: 15%; transform: translate(-25%, -50%); text-align: center;">
-                <div class="position-absolute top-50 start-50 translate-middle">
-                <p class="display-1 fw-bold text-secondary">芒果 國際</p>
-                <hr class="mb-1 mx-n3 text-secondary">
-                <p class="h4 mt-3 text-center fw-bold text-fire">英雄可以沒有家</p>
-                <p class="h4 mt-3 text-center fw-bold text-fire">但是不能沒有戰馬</p>
-            </div>
-        </div>
-    </section> -->
-    <!-- <swiper
-    :style="{
-      '--swiper-navigation-color': '#fff',
-      '--swiper-pagination-color': '#fff',
-    }"
-    :speed="600"
-    :parallax="true"
-    :pagination="{ clickable: true }"
-    :navigation="true"
-    :modules="modules"
-    class="mySwiper mb-5 aa"
-  >
-    <template #container-start>
-      <div
-        class="parallax-bg"
-        :style="{ backgroundImage: `url(${require('@/assets/car-img/f-page3.jpg')})`}"
-        data-swiper-parallax="-23%"
-      ></div>
-    </template>
-
-    <swiper-slide>
-      <div class="title" data-swiper-parallax="-300"></div>
-      <div class="subtitle" data-swiper-parallax="-200"></div>
-      <div class="text position-absolute top-50 start-50 translate-middle" data-swiper-parallax="-100">
-                <p class="display-1 fw-bold text-secondary">芒果 國際</p>
-                <hr class="mb-1 mx-n3 text-secondary">
-                <p class="h4 mt-3 text-center fw-bold text-fire">英雄可以沒有家</p>
-                <p class="h4 mt-3 text-center fw-bold text-fire">但是不能沒有戰馬</p>
-      </div>
-    </swiper-slide>
-
-    <swiper-slide>
-      <div class="title fw-bold" data-swiper-parallax="-300">芒果國際销售服务</div>
-      <div class="subtitle fw-bold mb-3" data-swiper-parallax="-200">我们的服务特点</div>
-      <div class="text" data-swiper-parallax="-100">
-        <p>🌟多款认证二手车，品质保证</p>
-          <p>💰 弹性贷款计划，让您轻松拥有心仪座驾</p>
-            <p>🚗 全方位车辆检测，确保您的安全驾驶</p>
-              <p>📈 交易透明，无隐费用，绝对信任</p>
-                <p>🎁 限时特惠：购车即享多项福利！</p>
-                  <p>📞 预约试驾请致电：123-456-7890</p>
-                    <p>📍 地址：芒果国际汽车广场，期待为您服务！</p>
-      </div>
-    </swiper-slide>
-
-    <swiper-slide>
-      <div class="title fw-bold" data-swiper-parallax="-300">芒果國際 x 流浪动物關懷项目</div>
-      <div class="subtitle fw-bold mb-3" data-swiper-parallax="-200">✨ 為您的購車賦予更多意義</div>
-      <div class="text" data-swiper-parallax="-100">
-        <p>🏡 收养一辆车，我们将捐赠给流浪动物关怀项目</p>
-        <p>🌈 一部分销售额将用于流浪动物医疗和庇护所支持</p>
-        <p>🎁 每一位购车顾客将获得一份流浪动物关怀捐赠证书</p>
-      </div>
-    </swiper-slide>
-  </swiper> -->
     <section class="mb-5">
         <div class="row d-flex justify-content-center m-0">
             <div class="col-lg-10 p-0">
@@ -78,7 +12,6 @@
                         <h4 class="mb-3 fw-bold d-flex"><i class="bi bi-car-front-fill mx-3 text-fire"></i><p>填寫表單專人到府估車</p></h4>
                         <h4 class="mb-3 fw-bold d-flex"><i class="bi bi-car-front-fill mx-3 text-fire"></i><p>價格公道透明</p></h4>
                         <h4 class="mb-5 fw-bold d-flex"><i class="bi bi-car-front-fill mx-3 text-fire"></i><p>每台車獲利捐出30%給流浪動物基金會</p></h4>
-                        <!-- <button type="button" class="btn btn-outline-fire mb-lg-0 mb-4 mx-auto fw-bold" @click.prevent="toIntroduce">詳細服務介紹</button> -->
                     </div>
                     <div class="col p-0">
                         <img class="garage-size" src="../assets/car-img/car-garage.jpg" alt="車庫圖">
@@ -118,45 +51,11 @@
                               </router-link>
                             </div>
                         </div>
-                        <!-- <div class="col">
-                            <div class="card border-0 text-white show-card-detail">
-                                <img class="card-img car-model rounded-4" src="../assets/car-img/911turbo.jpg" alt="911turbo">
-                                <div class="card-img-overlay d-flex flex-column justify-content-end">
-                                    <p class="c2 fw-bold mb-0">車種</p>
-                                    <p class="c2 text-nowrap m-0 title">porsche-911 turbo S</p>
-                                    <div class="c1 card-img-overlay gradient car-model rounded-4  ">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card border-0 text-white show-card-detail">
-                                <img class="card-img car-model rounded-4" src="../assets/car-img/x6.jpg" alt="x6">
-                                <div class="card-img-overlay d-flex flex-column justify-content-end">
-                                    <p class="c2 fw-bold mb-0">車種</p>
-                                    <p class="c2 text-nowrap m-0 title">BMW X6</p>
-                                    <div class="c1 card-img-overlay gradient car-model rounded-4">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card border-0 text-white show-card-detail">
-                                <img class="card-img car-model rounded-4" src="../assets/car-img/r4.jpg" alt="r4">
-                                <div class="card-img-overlay d-flex flex-column justify-content-end">
-                                    <p class="c2 fw-bold mb-0">車種</p>
-                                    <p class="c2 text-nowrap m-0 title">toyota Corolla Cross</p>
-                                    <div class="c1 card-img-overlay gradient car-model rounded-4  ">
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- <hot-swiper ref="hotSwiper" :topFiveEarlyProp="topFiveEarly"></hot-swiper> -->
     <div class="d-flex justify-content-center mt-5 mb-6">
         <router-link to="/page3">
             <button class="btn btn-fire text-white fw-bold"><p class="m-0 px-5">觀看更多坐駕</p></button>
@@ -166,7 +65,6 @@
         <div class="d-flex justify-content-center">
             <img src="../assets/car-img/title3.png" alt="服務介紹">
         </div>
-        <p class="text-center mb-6">這裡是在還在等家的浪浪們，若您正巧在找個家人，不訪來認識一下唄</p>
     </section>
     <section>
         <div class="mt-4 mb-5">
@@ -177,7 +75,6 @@
                             <img class="pb-lg-4 pb-0 car-model3" src="../assets/car-img/pag2/buy-car1.png" alt="網路選購好車">
                         </div>
                         <div class="col-9 d-flex flex-column justify-content-center ps-lg-0 ps-5">
-                            <!-- <h3 class="kalma  text-fire pb-lg-3 pb-1 m-0 text-lg-center text-start">STEP1</h3> -->
                             <h3 class="fw-bold pb-lg-3 pb-2 m-0 text-lg-center text-start text-fire">網路預約</h3>
                             <p class="text-lg-center text-start mb-5 fw-bold">專人到府估車<br>現場賞車<br>立即線上預約</p>
                         </div>
@@ -189,7 +86,6 @@
                             <img class="pb-lg-4 pb-0 car-model3" src="../assets/car-img/pag2/buy-car2.png" alt="到店賞車">
                         </div>
                         <div class="col-9 d-flex flex-column justify-content-center ps-lg-0 ps-5">
-                            <!-- <h3 class="kalma  text-fire pb-lg-3 pb-1 m-0 text-lg-center text-start">STEP2</h3> -->
                             <h3 class="fw-bold pb-lg-3 pb-2 m-0 text-lg-center text-start text-fire">服務周到</h3>
                             <p class="text-lg-center text-start mb-5 fw-bold">完整了解車輛歷程<br>嚴格標準從頭到腳檢測<br>多輛車款、庫存</p>
                         </div>
@@ -201,7 +97,6 @@
                             <img class="pb-lg-4 pb-0 car-model3" src="../assets/car-img/pag2/buy-car3.png" alt="喜提新車">
                         </div>
                         <div class="col-9 d-flex flex-column justify-content-center ps-lg-0 ps-5">
-                            <!-- <h3 class="kalma  text-fire pb-lg-3 pb-1 m-0 text-lg-center text-start">STEP3</h3> -->
                             <h3 class="fw-bold pb-lg-3 pb-2 m-0 text-lg-center text-start text-fire">到府估車</h3>
                             <p class="text-lg-center text-start mb-5 fw-bold">有想賣的車<br>立即填寫表單<br>專人到府估車</p>
                         </div>
@@ -213,7 +108,6 @@
                             <img class="pb-lg-4 pb-0 car-model3" src="../assets/car-img/pag2/buy-car4.png" alt="幫助浪浪">
                         </div>
                         <div class="col-9 d-flex flex-column justify-content-center ps-lg-0 ps-5">
-                            <!-- <h3 class="kalma  text-fire pb-lg-3 pb-1 m-0 text-lg-center text-start">STEP4</h3> -->
                             <h3 class="fw-bold pb-lg-3 pb-2 m-0 text-lg-center text-start text-fire">幫助浪浪</h3>
                             <p class="text-lg-center text-start mb-5 fw-bold">購買成功後<br>以車主名義捐款30%</p>
                         </div>
@@ -222,15 +116,8 @@
             </div>
         </div>
     </section>
-    <!-- <section class="">
-        <div class="d-flex justify-content-center">
-            <img src="../assets/car-img/title4.png" alt="聯絡我們">
-        </div>
-        <p class="text-center mb-6">這裡是在還在等家的浪浪們，若您正巧在找個家人，不訪來認識一下唄</p>
-    </section> -->
     <section>
         <div class="bg-img-size4" :style="{ backgroundImage: `url(${require('@/assets/car-img/f-page4.jpg')})`}">
-            <!-- <div class="position-absolute text-center text-secondary" style="top: 50%; left: 15%; transform: translate(-25%, -50%); text-align: center;">  -->
             <div class="row m-0">
               <div class="col-lg-4 col-12 text-white d-flex flex-column justify-content-center align-items-center">
                 <div class="row d-flex flex-column">
@@ -343,35 +230,3 @@ export default {
   }
 }
 </script>
-
-<!-- <style>
-#app { height: 100% }
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-body {
-  background: #e2e2e2;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
-
-.aa {
-  width: 100%;
-  height: 650px;
-}
-
-.swiper-slide {
-  font-size: 18px;
-  color: #fff;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0;
-}
-
-</style> -->

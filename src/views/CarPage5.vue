@@ -74,34 +74,6 @@
             </div>
         </div>
     </section>
-    <!-- <section>
-        <div class="row m-0 d-flex justify-content-center py-5">
-            <div class="col-lg-2 col-10">
-                <div class="row m-0">
-                    <div class="col text-center">
-                        <a class="text-black" href="">
-                            <i class="bi bi-chevron-compact-left"></i>
-                        </a>
-                    </div>
-                    <div class="col text-center">
-                        <a class="kalma text-decoration-none text-black" href="">
-                            1
-                        </a>
-                    </div>
-                    <div class="col text-center">
-                        <a class="kalma text-decoration-none text-info" href="">
-                            2
-                        </a>
-                    </div>
-                    <div class="col text-center">
-                        <a class="text-black" href="">
-                            <i class="bi bi-chevron-compact-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
         <Footer></Footer>
     </template>
 

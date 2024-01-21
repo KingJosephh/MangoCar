@@ -28,26 +28,6 @@
                                     <h6 class="kalma position-absolute text-fire ds-dash">-</h6>
                                     <h6 class="kalma position-relative ds-hover"><router-link :to="{name:'page7', params:{managerId:item.id}}" class="link-unstyled text-reset text-decoration-none">{{ item.name }}</router-link></h6>
                                 </div>
-                                <!-- <div class="col d-flex ds-dash-father ds-hover-father">
-                                    <h6 class="kalma position-absolute text-fire ds-dash">-</h6>
-                                    <h6 class="kalma position-relative ds-hover"><router-link to="/page7" class="link-unstyled text-reset text-decoration-none">Olivia</router-link></h6>
-                                </div>
-                                <div class="col d-flex ds-dash-father ds-hover-father">
-                                    <h6 class="kalma position-absolute text-fire ds-dash">-</h6>
-                                    <h6 class="kalma position-relative ds-hover"><router-link to="/page7" class="link-unstyled text-reset text-decoration-none">Liam</router-link></h6>
-                                </div>
-                                <div class="col d-flex ds-dash-father ds-hover-father">
-                                    <h6 class="kalma position-absolute text-fire ds-dash">-</h6>
-                                    <h6 class="kalma position-relative ds-hover"><router-link to="/page7" class="link-unstyled text-reset text-decoration-none">Emma</router-link></h6>
-                                </div>
-                                <div class="col d-flex ds-dash-father ds-hover-father">
-                                    <h6 class="kalma position-absolute text-fire ds-dash">-</h6>
-                                    <h6 class="kalma position-relative ds-hover"><router-link to="/page7" class="link-unstyled text-reset text-decoration-none">Noah</router-link></h6>
-                                </div>
-                                <div class="col d-flex ds-dash-father ds-hover-father">
-                                    <h6 class="kalma position-absolute text-fire ds-dash">-</h6>
-                                    <h6 class="kalma position-relative ds-hover"><router-link to="/page7" class="link-unstyled text-reset text-decoration-none">Ava</router-link></h6>
-                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -79,39 +59,6 @@
                             </div>
                           </router-link>
                         </div>
-                        <!-- <div class="col">
-                            <div class="card border-0 text-white show-card-detail">
-                                <img class="card-img car-model rounded-4" src="../assets/car-img/911turbo.jpg" alt="911turbo">
-                                <div class="card-img-overlay d-flex flex-column justify-content-end">
-                                    <p class="c2 fw-bold mb-0">車種</p>
-                                    <p class="c2 text-nowrap m-0 title">porsche-911 turbo S</p>
-                                    <div class="c1 card-img-overlay gradient car-model rounded-4  ">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card border-0 text-white show-card-detail">
-                                <img class="card-img car-model rounded-4" src="../assets/car-img/x6.jpg" alt="x6">
-                                <div class="card-img-overlay d-flex flex-column justify-content-end">
-                                    <p class="c2 fw-bold mb-0">車種</p>
-                                    <p class="c2 text-nowrap m-0 title">BMW X6</p>
-                                    <div class="c1 card-img-overlay gradient car-model rounded-4  ">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card border-0 text-white show-card-detail">
-                                <img class="card-img car-model rounded-4" src="../assets/car-img/r4.jpg" alt="r4">
-                                <div class="card-img-overlay d-flex flex-column justify-content-end">
-                                    <p class="c2 fw-bold mb-0">車種</p>
-                                    <p class="c2 text-nowrap m-0 title">toyota Corolla Cross</p>
-                                    <div class="c1 card-img-overlay gradient car-model rounded-4  ">
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                     <div v-else>
                         <h2 class="text-center">找不到符合的車輛</h2>

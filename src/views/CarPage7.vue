@@ -34,7 +34,6 @@
           <div class="col-lg-4 mt-5">
                 <div class="card border-0 shadow-sm rounded-4">
                     <div class="card-header border-0 bg-transparent p-0">
-                        <!-- <div class="car-bg-img" style="background-image: url('../assets/car-img/per2.jpg');"></div> -->
                         <img class="card-img rounded-top-4" :src="manager.imgUrl" alt="per2">
                     </div>
                     <div class="card-body">

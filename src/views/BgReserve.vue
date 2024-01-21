@@ -33,7 +33,7 @@
           <td>
             <div class="btn-group d-flex flex-end">
               <button class="btn btn-outline-green btn-sm" @click="openModal(item)">編輯</button>
-              <button class="btn btn-outline-danger btn-sm">刪除</button>
+              <button class="btn btn-outline-danger btn-sm" @click="openDelModal(item)">刪除</button>
             </div>
           </td>
         </tr>
@@ -41,14 +41,17 @@
     </table>
     </div>
     <ReserveModal ref="reserveModal" :reserveData="reserve" @reserveData="updated"></ReserveModal>
+    <DelModal ref="delModal" :delProduct="reserve" @del-item="delModal"></DelModal>
 </template>
 <script>
 import BgNavBar from '../components/bgNavBar.vue'
 import ReserveModal from '../components/reserveModal.vue'
+import DelModal from '../components/delModal.vue'
 export default {
   components: {
     BgNavBar,
-    ReserveModal
+    ReserveModal,
+    DelModal
   },
   data () {
     return {
@@ -59,7 +62,7 @@ export default {
   methods: {
     getReserve () {
       const api = `${process.env.VUE_APP_API}/reserveList`
-      this.$http.get(api + '/reserveList')
+      this.$http.get(api)
         .then((res) => {
           this.appointment = res.data
         })
@@ -84,6 +87,23 @@ export default {
         })
       const modal = this.$refs.reserveModal
       modal.hideModal()
+    },
+    openDelModal (aa) {
+      this.reserve = { ...aa }
+      const modal = this.$refs.delModal
+      modal.showModal()
+    },
+    delModal (aa) {
+      const api = `${process.env.VUE_APP_API}/reserveList/${aa.id}`
+      this.$http.delete(api)
+        .then((res) => {
+          this.getReserve()
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+      const del = this.$refs.delModal
+      del.hideModal()
     }
   },
   created () {
