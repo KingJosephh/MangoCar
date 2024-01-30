@@ -2,8 +2,8 @@
     <section class="border-top border-fire">
         <div class="row d-flex justify-content-center pt-5 m-0 row-cols-lg-2 row-cols-1">
             <div class="col-8">
-                <div class="row m-0">
-                    <div class="col-6 d-flex justify-content-center mb-5">
+                <div class="row m-0 flex-lg-row flex-column">
+                    <div class="col-6 d-flex justify-content-center mb-5 mx-auto">
                         <i class="bi bi-person-hearts fs-s-104 text-fire"></i>
                         <div class="ps-4 d-flex flex-column justify-content-center">
                             <h5>官網賞車</h5>
@@ -13,7 +13,7 @@
                             </router-link>
                         </div>
                     </div>
-                    <div class="col-6 d-flex justify-content-center mb-5">
+                    <div class="col-6 d-flex justify-content-center mb-5 mx-auto">
                         <i class="bi bi-coin fs-s-104 text-fire"></i>
                         <div class="ps-4 d-flex flex-column justify-content-center">
                             <h5>預約估車</h5>
