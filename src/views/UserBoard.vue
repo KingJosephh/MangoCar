@@ -25,7 +25,7 @@
             <div class="d-flex justify-content-center pb-5">
                 <img src="../assets/car-img/title2.png" alt="近期好車">
             </div>
-            <div class="row">
+            <div class="row" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                 <div class="col-lg-12">
                     <div class="row g-4 m-0 row-cols-lg-4 row-cols-2 px-lg-0 px-4">
                         <div class="col" v-for="(item, index) in topFive" :key="index">
@@ -61,7 +61,7 @@
             <button class="btn btn-fire text-white fw-bold"><p class="m-0 px-5">觀看更多坐駕</p></button>
         </router-link>
     </div>
-    <section class="">
+    <section>
         <div class="d-flex justify-content-center">
             <img src="../assets/car-img/title3.png" alt="服務介紹">
         </div>
@@ -70,7 +70,7 @@
         <div class="mt-4 mb-5">
             <div class="row px-6 m-0 row-cols-lg-4 row-cols-1">
                 <div class="col">
-                    <div class="row row-cols-lg-1 row-cols-2">
+                    <div class="row row-cols-lg-1 row-cols-2" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                         <div class="col-3 d-flex justify-content-center">
                             <img class="pb-lg-4 pb-0 car-model3" src="../assets/car-img/pag2/buy-car1.png" alt="網路選購好車">
                         </div>
@@ -81,7 +81,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="row row-cols-lg-1 row-cols-2">
+                    <div class="row row-cols-lg-1 row-cols-2" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                         <div class="col-3 d-flex justify-content-center">
                             <img class="pb-lg-4 pb-0 car-model3" src="../assets/car-img/pag2/buy-car2.png" alt="到店賞車">
                         </div>
@@ -92,7 +92,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="row row-cols-lg-1 row-cols-2">
+                    <div class="row row-cols-lg-1 row-cols-2" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                         <div class="col-3 d-flex justify-content-center">
                             <img class="pb-lg-4 pb-0 car-model3" src="../assets/car-img/pag2/buy-car3.png" alt="喜提新車">
                         </div>
@@ -103,7 +103,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="row row-cols-lg-1 row-cols-2">
+                    <div class="row row-cols-lg-1 row-cols-2" data-aos="fade-up" data-aos-duration="800" data-aos-delay="900">
                         <div class="col-3 d-flex justify-content-center">
                             <img class="pb-lg-4 pb-0 car-model3" src="../assets/car-img/pag2/buy-car4.png" alt="幫助浪浪">
                         </div>
@@ -119,7 +119,7 @@
     <section>
         <div class="bg-img-size4" :style="{ backgroundImage: `url(${require('@/assets/car-img/f-page4.jpg')})`}">
             <div class="row m-0">
-              <div class="col-lg-4 col-12 text-white d-flex flex-column justify-content-center align-items-center">
+              <div class="col-lg-4 col-12 text-white d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                 <div class="row d-flex flex-column">
                   <div class="col-lg-12 col-0 d-lg-block d-none">
                     <img src="@/assets/car-img/shop1.jpg" :style="{height:'400px'}" class="car-model4 mt-5">
@@ -132,7 +132,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-12 text-white d-flex flex-column justify-content-center align-items-center">
+              <div class="col-lg-4 col-12 text-white d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                 <div class="row d-flex flex-column">
                   <div class="col-lg-12 col-0 d-lg-block d-none">
                     <img src="@/assets/car-img/shop2.jpg" :style="{height:'400px'}" class="car-model4 mt-5">
@@ -145,7 +145,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-12 text-white d-flex flex-column justify-content-center align-items-center">
+              <div class="col-lg-4 col-12 text-white d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                 <div class="row d-flex flex-column">
                   <div class="col-lg-12 col-0 d-lg-block d-none">
                     <img src="@/assets/car-img/shop3.jpg" :style="{height:'400px'}" class="car-model4 mt-5">

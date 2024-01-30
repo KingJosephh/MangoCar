@@ -17,7 +17,7 @@
             </p>
         </div>
         <div class="container-fluid">
-            <div class="row mb-lg-5">
+            <div class="row mb-lg-5" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                 <div class="col-lg-8 col p-0">
                     <img src="@/assets/car-img/pg-5-1.jpg" class="card-img car-model5" alt="...">
                 </div>
@@ -28,7 +28,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row mb-lg-5 flex-lg-row-reverse">
+            <div class="row mb-lg-5 flex-lg-row-reverse" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                 <div class="col-lg-8 col p-0">
                     <img src="@/assets/car-img/pg-5-2.jpg" class="card-img car-model5" alt="...">
                 </div>
@@ -39,7 +39,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row mb-lg-5">
+            <div class="row mb-lg-5" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                 <div class="col-lg-8 col p-0">
                     <img src="@/assets/car-img/pg-5-3.jpg" class="card-img car-model5" alt="...">
                 </div>
@@ -50,7 +50,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row mb-lg-5 flex-lg-row-reverse">
+            <div class="row mb-lg-5 flex-lg-row-reverse" data-aos="fade-up" data-aos-duration="400" data-aos-delay="300">
                 <div class="col-lg-8 col p-0">
                     <img src="@/assets/car-img/pg-5-4.jpg" class="card-img car-model5" alt="...">
                 </div>
@@ -61,7 +61,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row mb-lg-5">
+            <div class="row mb-lg-5" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                 <div class="col-lg-8 col p-0">
                     <img src="@/assets/car-img/pg-5-5.jpg" class="card-img car-model5" alt="...">
                 </div>
