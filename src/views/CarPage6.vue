@@ -36,17 +36,6 @@
                                             <i class="bi bi-check2-square text-fire" :class="{'text-disable': value === false }"></i>
                                             {{ item }}
                                           </p>
-                                          <!-- <p :class="{'text-disable': !provide.includes('防盜系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('防盜系統')}"></i>防盜系統</p>
-                                          <p :class="{'text-disable': !provide.includes('循跡系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('循跡系統')}"></i>循跡系統</p>
-                                          <p :class="{'text-disable': !provide.includes('煞車輔助系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('煞車輔助系統')}"></i>煞車輔助系統</p>
-                                          <p :class="{'text-disable': !provide.includes('ABS防鎖死')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('ABS防鎖死')}"></i>ABS防鎖死</p>
-                                        </div>
-                                        <div class="col">
-                                          <p :class="{'text-disable': !provide.includes('動態穩定系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('動態穩定系統')}"></i>動態穩定系統</p>
-                                          <p :class="{'text-disable': !provide.includes('keyless免鑰系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('keyless免鑰系統')}"></i>keyless免鑰系統</p>
-                                          <p :class="{'text-disable': !provide.includes('中控鎖')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('中控鎖')}"></i>中控鎖</p>
-                                          <p :class="{'text-disable': !provide.includes('兒童安全椅固定裝置')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('兒童安全椅固定裝置')}"></i>兒童安全椅固定裝置</p>
-                                          <p :class="{'text-disable': !provide.includes('安全氣囊')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !provide.includes('安全氣囊')}"></i>安全氣囊</p> -->
                                         </div>
                                     </div>
                                 </div>
@@ -58,17 +47,6 @@
                                             <i class="bi bi-check2-square text-fire" :class="{'text-disable': value === false }"></i>
                                             {{ item }}
                                           </p>
-                                            <!-- <p :class="{'text-disable': !comfortProvide.includes('倒車顯影系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('倒車顯影系統')}"></i>倒車顯影系統</p>
-                                            <p :class="{'text-disable': !comfortProvide.includes('多功能方向盤')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('多功能方向盤')}"></i>多功能方向盤</p>
-                                            <p :class="{'text-disable': !comfortProvide.includes('恆溫空調')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('恆溫空調')}"></i>恆溫空調</p>
-                                            <p :class="{'text-disable': !comfortProvide.includes('電動車窗')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('電動車窗')}"></i>電動車窗</p>
-                                        </div>
-                                        <div class="col">
-                                            <p :class="{'text-disable': !comfortProvide.includes('衛星導航')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('衛星導航')}"></i>衛星導航</p>
-                                            <p :class="{'text-disable': !comfortProvide.includes('LED頭燈')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('LED頭燈')}"></i>LED頭燈</p>
-                                            <p :class="{'text-disable': !comfortProvide.includes('倒車雷達')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('倒車雷達')}"></i>倒車雷達</p>
-                                            <p :class="{'text-disable': !comfortProvide.includes('自動停車系統')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('自動停車系統')}"></i>自動停車系統</p>
-                                            <p :class="{'text-disable': !comfortProvide.includes('真皮座椅')}"><i class="bi bi-check2-square text-fire" :class="{'text-disable': !comfortProvide.includes('真皮座椅')}"></i>真皮座椅</p> -->
                                         </div>
                                     </div>
                                 </div>
@@ -80,7 +58,6 @@
             <div class="col-lg-4 mt-5">
                 <div class="card border-0 shadow-sm rounded-4">
                     <div class="card-header border-0 bg-transparent p-0">
-                        <!-- <div class="car-bg-img" style="background-image: url('../assets/car-img/per2.jpg');"></div> -->
                         <img class="car-bg-img" :src="managerId.imgUrl" alt="per2">
                     </div>
                     <div class="card-body">

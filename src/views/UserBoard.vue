@@ -33,7 +33,7 @@
                               <router-link :to="{name:'page6', params:{carListId:item.id}}">
                                 <img class="card-img car-model rounded-4" :src="`${item.imgUrl[0]}`" alt="s63">
                                 <div class="card-img-overlay d-flex flex-column justify-content-end">
-                                    <p class="c2 fw-bold mb-0 text-white">車種</p>
+                                    <!-- <p class="c2 fw-bold mb-0 text-white">車種</p> -->
                                     <p class="c2 m-0 title text-white">{{ item.carName }}</p>
                                     <div class="c2 d-lg-flex justify-content-between">
                                       <div class="c2 d-flex justify-content-lg-between">
@@ -44,7 +44,7 @@
                                     </div>
                                     <div class="c1 card-img-overlay gradient car-model rounded-4">
                                       <div class="d-flex justify-content-center h-100">
-                                        <p class="d-flex align-items-lg-center h5 text-white fw-bold">點我</p>
+                                        <p class="d-flex align-items-lg-center my-auto h5 text-white fw-bold d-lg-block d-none">點我</p>
                                       </div>
                                     </div>
                                 </div>

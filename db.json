@@ -360,7 +360,7 @@
         "自動停車系統": true,
         "真皮座椅": true
       },
-      "fire": "125",
+      "fire": "126",
       "salesManagerId": "M03",
       "state": "未出售"
     },
@@ -850,7 +850,7 @@
         "自動停車系統": true,
         "真皮座椅": true
       },
-      "fire": "213",
+      "fire": "216",
       "salesManagerId": "M04",
       "state": "未出售"
     },
@@ -1585,9 +1585,52 @@
         "自動停車系統": true,
         "真皮座椅": true
       },
-      "fire": "477",
+      "fire": "478",
       "salesManagerId": "M05",
       "state": "未出售"
+    },
+    {
+      "imgUrl": [
+        "https://i.pinimg.com/564x/e8/6b/c4/e86bc493662c2316a2cf848ff506fb75.jpg",
+        "https://i.pinimg.com/236x/88/28/06/8828066c8561260d8c9e32c167dd9d1a.jpg",
+        "https://i.pinimg.com/236x/21/65/ea/2165ea66cdd671f7abc6245c1a53b5b8.jpg"
+      ],
+      "provide": {
+        "胎壓偵測": true,
+        "防盜系統": true,
+        "循跡系統": true,
+        "煞車輔助系統": true,
+        "ABS防鎖死": true,
+        "動態穩定系統": true,
+        "keyless免鑰系統": true,
+        "中控鎖": true,
+        "兒童安全椅固定裝置": false,
+        "安全氣囊": true
+      },
+      "comfortProvide": {
+        "定速系統": true,
+        "倒車顯影系統": true,
+        "多功能方向盤": true,
+        "恆溫空調": true,
+        "電動車窗": true,
+        "LED頭燈": true,
+        "衛星導航": true,
+        "倒車雷達": true,
+        "自動停車系統": true,
+        "真皮座椅": true
+      },
+      "fire": "0",
+      "brandId": "B07",
+      "carName": "Mercedes-Benz C63",
+      "year": 2018,
+      "longJourney": "1.3萬",
+      "doorPassenger": "四門五座",
+      "dye": "汽油.c",
+      "date": "2024-01-30",
+      "price": "322.3萬",
+      "salesManagerId": "M02",
+      "state": "未出售",
+      "id": "5sRJ7jK"
     }
   ]
 }

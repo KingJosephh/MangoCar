@@ -8,7 +8,7 @@
         <table class="table mt-4">
       <thead>
         <tr>
-          <th width="120">車輛品牌</th>
+          <th width="100">車輛品牌</th>
           <th width="120">款式</th>
           <th width="120">年分</th>
           <th width="120">里程</th>
@@ -45,9 +45,9 @@
           </td>
         </tr>
       </tbody>
-      <v-else>
+      <div v-else>
           <h2 class="text-center text-nowrap mt-5">找不到符合的車輛</h2>
-      </v-else>
+      </div>
     </table>
     <nav aria-label="Page navigation example" class="d-flex justify-content-center">
           <ul class="pagination">
@@ -235,7 +235,7 @@ export default {
         price: 'all',
         km: 'all',
         year: 'all',
-        onSell: 'sell',
+        onSell: 'unSell',
         page: 'all'
       }
       const filerM = this.$refs.filter

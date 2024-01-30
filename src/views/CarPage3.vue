@@ -52,7 +52,7 @@
                                     </div>
                                     <div class="c1 card-img-overlay gradient car-model rounded-4">
                                       <div class="d-flex justify-content-center h-100">
-                                        <p class="d-flex align-items-lg-center h5 text-white fw-bold">點我</p>
+                                        <p class="d-flex align-items-lg-center my-auto h5 text-white fw-bold d-lg-block d-none">點我</p>
                                       </div>
                                     </div>
                                 </div>
