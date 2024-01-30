@@ -3,24 +3,24 @@
         <div class="row d-flex justify-content-center pt-5 m-0 row-cols-lg-2 row-cols-1">
             <div class="col-8">
                 <div class="row m-0">
-                    <div class="col d-flex justify-content-center mb-5">
+                    <div class="col-6 d-flex justify-content-center mb-5">
                         <i class="bi bi-person-hearts fs-s-104 text-fire"></i>
                         <div class="ps-4 d-flex flex-column justify-content-center">
-                            <h5>加入我們的團隊</h5>
-                            <P>我會賣車，希望能盡一份心力</P>
-                            <a href="./page4.html">
-                                <button class="btn btn-outline-dark"><p class="m-0 px-4 text-nowrap">聯絡我們</p></button>
-                            </a>
+                            <h5>官網賞車</h5>
+                            <P>車種多樣，任君挑選</P>
+                            <router-link to="/page3" href="./page4.html">
+                                <button class="btn btn-outline-dark"><p class="m-0 px-4 text-nowrap">前往賞車</p></button>
+                            </router-link>
                         </div>
                     </div>
-                    <div class="col d-flex justify-content-center mb-5">
+                    <div class="col-6 d-flex justify-content-center mb-5">
                         <i class="bi bi-coin fs-s-104 text-fire"></i>
                         <div class="ps-4 d-flex flex-column justify-content-center">
-                            <h5>贊助我們的團隊</h5>
+                            <h5>預約估車</h5>
                             <P>我有好車，請團隊估車</P>
-                            <a href="./page4.html">
-                                <button class="btn btn-outline-dark"><p class="m-0 px-4 text-nowrap">估車專欄</p></button>
-                            </a>
+                            <router-link to="/page4" href="./page4.html">
+                                <button class="btn btn-outline-dark"><p class="m-0 px-4 text-nowrap">前往預約</p></button>
+                            </router-link>
                         </div>
                     </div>
                 </div>
