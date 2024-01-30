@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunksecond_hand_car"]=self["webpackChunksecond_hand_car"]||[]).push([[443],{833:function(n,a,c){c.r(a),c.d(a,{default:function(){return h}});var e=c(6252);const r={class:"about"},s=(0,e._)("h1",null,"This is an about page",-1),u=[s];function t(n,a){return(0,e.wg)(),(0,e.iD)("div",r,u)}var o=c(3744);const d={},i=(0,o.Z)(d,[["render",t]]);var h=i}}]);
+//# sourceMappingURL=about.dc1988d8.js.map
